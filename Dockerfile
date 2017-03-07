@@ -1,5 +1,9 @@
 FROM phusion/baseimage
 
+LABEL Vendor="lyberteam"
+LABEL  Description="This is a reaplexor image"
+
+
 CMD ["/sbin/my_init"]
 
 RUN apt-get update
