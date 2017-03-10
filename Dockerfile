@@ -1,7 +1,9 @@
 FROM phusion/baseimage
 
 LABEL Vendor="lyberteam"
-LABEL  Description="This is a reaplexor image"
+LABEL Description="This is a reaplexor image"
+LABEL Version="1.1.2"
+LABEL SpecialThanks="DmitryKoterov"
 
 
 CMD ["/sbin/my_init"]
@@ -34,3 +36,15 @@ EXPOSE 8088
 # EXPOSE 443
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+RUN echo "#####################################################################################################"
+RUN echo "\
+            _                _                     _
+           | |              | |                   | |
+           | |       _   _  | |__     ___   _ __  | |_    ___    __ _   _ __ ___
+           | |      | | | | | '_ \   / _ \ | '__| | __|  / _ \  / _` | | '_ ` _ \|
+           | |____  | |_| | | |_) | |  __/ | |    | |_  |  __/ | (_| | | | | | | |
+           |______|  \__, | |_.__/   \___| |_|     \__|  \___|  \__,_| |_| |_| |_|
+                      __/ |
+                     |___/                                                          "
+RUN echo "#####################################################################################################"
